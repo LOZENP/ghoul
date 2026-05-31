@@ -8,18 +8,18 @@ ast = compiler:compile(ast)
 
 ]]
 
-local Scope    = require("nightowl.scope")      -- your Scope from nightowl.lua
-local Ast      = require("nightowl.ast")        -- your Ast from nightowl.lua
-local util     = require("nightowl.util")       -- your util from nightowl.lua
-local visitast = require("nightowl.visitast")   -- your visitAst from nightowl.lua
+local Scope    = require("ghoul.scope")      -- your Scope from nightowl.lua
+local Ast      = require("ghoul.ast")        -- your Ast from nightowl.lua
+local util     = require("ghoul.util")       -- your util from nightowl.lua
+local visitast = require("ghoul.visitast")   -- your visitAst from nightowl.lua
 
-local blockModule      = require("compiler.block")
-local registerModule   = require("compiler.register")
-local upvalueModule    = require("compiler.upvalue")
-local emitModule       = require("compiler.emit")
-local compileCoreModule= require("compiler.compile_core")
-local expressionHandlerFactory = require("compiler.expressions")
-local statementHandlerFactory  = require("compiler.statements")
+local blockModule      = require("ghoul.compiler.block")
+local registerModule   = require("ghoul.compiler.register")
+local upvalueModule    = require("ghoul.compiler.upvalue")
+local emitModule       = require("ghoul.compiler.emit")
+local compileCoreModule= require("ghoul.compiler.compile_core")
+local expressionHandlerFactory = require("ghoul.compiler.expressions")
+local statementHandlerFactory  = require("ghoul.compiler.statements")
 
 local AstKind = Ast.AstKind
 local unpack  = table.unpack or unpack
